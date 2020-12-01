@@ -11,7 +11,14 @@ import SightingService from '@/services/SightingService.js'
 
 export default {
 	name: 'sightings-grid',
-	
+	components: {
+		'sighting': Sighting
+	},
+	data(){
+		return {
+			sightings: []
+		};
+	},
 	mounted(){
 		SightingService.getSightings()
 		.then(sightings => this.sightings = sightings);
@@ -24,11 +31,8 @@ export default {
 			let index = this.sightings.findIndex(sighting => sighting._id === id)
 			this.sightings.splice(index, 1)
 		})
-	},
-	components: {
-		'sighting': Sighting
-	},
-	props: ['sightings']
+	}
+	
 }
 </script>
 

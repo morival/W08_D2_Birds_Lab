@@ -3,7 +3,7 @@
     <h2>{{ sighting.species }}</h2>
     <p>{{ sighting.location }} on {{ sighting.date|formatDate }}</p>
 
-    <button type="button" class="button" v-on:click="deleteSight">Delete Sighting</button>
+    <button type="button" v-on:click="deleteSighting">Delete Sighting</button>
   </div>
 </template>
 

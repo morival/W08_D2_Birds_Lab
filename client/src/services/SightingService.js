@@ -5,7 +5,7 @@ export default {
     return fetch(baseURL)
     .then(res => res.json())
   },
-  postSight(payload){
+  postSighting(payload){
     return fetch(baseURL, {
     method: 'POST',
     body: JSON.stringify(payload),
@@ -13,7 +13,7 @@ export default {
   })
   .then(res => res.json())
   },
-  deleteSight(id){
+  deleteSighting(id){
   return fetch(baseURL + id, {
     method: 'DELETE'
     })
